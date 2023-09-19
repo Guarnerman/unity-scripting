@@ -7,7 +7,7 @@ public class Moneda : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ContadorMonedas.cestaMoneda++;
+        //ContadorMonedas.cestaMoneda++;
     }
 
     // Update is called once per frame

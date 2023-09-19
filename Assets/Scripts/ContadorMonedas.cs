@@ -12,7 +12,7 @@ public class ContadorMonedas : MonoBehaviour
     {
     
         Debug.Log("La moneda ha sido creada");
-        cestaMoneda++;
+        ContadorMonedas.cestaMoneda++;
         Debug.Log(cestaMoneda);
     }
 
@@ -26,14 +26,16 @@ public class ContadorMonedas : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            Debug.Log(cestaMoneda);
             Destroy(gameObject);
         }
     }
 
     private void OnDestroy()
     {
-            cestaMoneda--;
-            Debug.LogFormat("Monedas: {0}", cestaMoneda);
+        ContadorMonedas.cestaMoneda--;
+        Debug.Log(cestaMoneda);
+
         
     }
 }

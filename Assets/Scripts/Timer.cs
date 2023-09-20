@@ -18,11 +18,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        contadorAbajo -= Time.deltaTime;
-        //if (contadorAbajo <= 0)
-        //{
-          //  Debug.Log("time.out");
-            //Application.LoadLevel(Application.loadedLevel);
-       // }
+        Timer.contadorAbajo -= Time.deltaTime;
+        if (contadorAbajo <= 0)
+        {
+            ContadorMonedas.destruirTotal = true;
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 }

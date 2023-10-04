@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public static int score = 0;
     public string scorePrefix = "Score: ";
 
-    public string scoreText = null;
+    public Text scoreText = null;
 
     public Text gameOverText = null;
 
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText = scorePrefix + score.ToString();
+            scoreText.text = scorePrefix + score.ToString();
         }
     }
 }
